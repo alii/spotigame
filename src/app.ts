@@ -21,10 +21,8 @@ const song = {
 
 elements.guess.addEventListener("keyup", (ev: KeyboardEvent) => {
   if (ev.key === "Enter") {
-    const result = compareTwoStrings(
-      (<HTMLInputElement>ev.target).value,
-      song.name
-    );
+    const target = <HTMLInputElement>ev.target;
+    const result = compareTwoStrings(target.value, song.name);
 
     if (result > 80) {
       // TODO: Handle
