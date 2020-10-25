@@ -25,3 +25,8 @@ export function parseToken(): string | null {
 
   return querystring.find(({ key }) => key === "access_token")?.value || null;
 }
+
+export const elements = {
+  artist: document.getElementById("artist") as HTMLParagraphElement,
+  guess: document.getElementById("guess") as HTMLInputElement,
+} as const;

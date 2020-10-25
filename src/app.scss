@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
+$primary: #1db954;
+$light: #ffffff;
+$dark: #191414;
+$font: "Inter", sans-serif;
+
+* {
+  margin: 0;
+  background: $dark;
+  color: $light;
+  font-family: $font;
+}
+
+body {
+  padding: 10%;
+}
+
+h2 {
+  color: $primary;
+  margin-bottom: 5px;
+}
+
+h4 {
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+label {
+  color: rgba($light, 0.5);
+  margin-top: 40px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 2px solid rgba($light, 0.1);
+  min-width: 170px;
+  padding: 10px 15px;
+  outline-color: $primary;
+  border-radius: 3px;
+  font-family: $font;
+}
