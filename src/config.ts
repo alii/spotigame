@@ -61,6 +61,7 @@ export class State {
     setTimeout(() => {
       document.body.classList.remove("correct");
       elements.guess.disabled = false;
+      elements.guess.focus();
     }, 2000);
   }
 }

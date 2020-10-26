@@ -1,4 +1,7 @@
 {
+  "name": "spotigame",
+  "description": "Spotify guessing game",
+  "license": "MIT",
   "devDependencies": {
     "@types/dotenv-webpack": "^3.0.0",
     "@types/spotify-web-playback-sdk": "^0.1.7",
