@@ -11,6 +11,9 @@ if (!token) {
   throw 0;
 }
 
+// Remove access token from the URL
+window.location.hash = "";
+
 const api = new SpotifyWebApi();
 api.setAccessToken(token);
 
