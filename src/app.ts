@@ -46,8 +46,6 @@ window.onSpotifyWebPlaybackSDKReady = async () => {
       name: playback.track_window.current_track.name,
       artist: playback.track_window.current_track.artists[0].name,
     };
-
-    elements.artist.innerHTML = `You are listening to a song by <b>${state.song.artist}</b>`;
   });
 
   player.addListener("ready", ({ device_id }) => {
@@ -67,8 +65,6 @@ window.onSpotifyWebPlaybackSDKReady = async () => {
       target.value.toLowerCase(),
       state.song.name.toLowerCase()
     );
-
-    console.log(result);
 
     if (result > 0.8) {
       state.points++;

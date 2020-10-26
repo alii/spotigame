@@ -38,13 +38,13 @@ export type TSong = {
 };
 
 export class State {
-  public song: TSong | null = null;
+  private _points: number = 0;
+
+  private _song: TSong | null = null;
 
   constructor() {
     this.points = 0;
   }
-
-  private _points: number = 0;
 
   get points(): number {
     return this._points;
@@ -63,5 +63,15 @@ export class State {
       elements.guess.disabled = false;
       elements.guess.focus();
     }, 2000);
+  }
+
+  get song() {
+    return this._song;
+  }
+
+  set song(newSong) {
+    if (!newSong)
+      throw new Error(`Song must be of type TSong (and not ${typeof newSong})`);
+    elements.artist.innerHTML = `You are listening to a song by <b>${newSong.artist}</b>`;
   }
 }
