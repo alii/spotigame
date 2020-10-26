@@ -22,7 +22,8 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "vercel-build": "node vercel.js&&yarn build"
   },
   "dependencies": {
     "spotify-web-api-js": "^1.5.0",

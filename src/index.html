@@ -13,8 +13,24 @@
   <h2>Spotigame</h2>
   <h4>The Spotify guessing game</h4>
   <p id="artist">You are not listening to a song</p>
+  <p id="points"></p>
   <label for="guess">Enter Guess</label>
   <input id="guess" placeholder="Guess" type="text"/>
+  <div id="correct-container">
+    <svg
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+              d="M5 13l4 4L19 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+      />
+    </svg>
+  </div>
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
   </body>
 </html>

@@ -29,4 +29,38 @@ export function parseToken(): string | null {
 export const elements = {
   artist: document.getElementById("artist") as HTMLParagraphElement,
   guess: document.getElementById("guess") as HTMLInputElement,
+  points: document.getElementById("points") as HTMLParagraphElement,
 } as const;
+
+export type TSong = {
+  name: string;
+  artist: string;
+};
+
+export class State {
+  public song: TSong | null = null;
+
+  constructor() {
+    this.points = 0;
+  }
+
+  private _points: number = 0;
+
+  get points(): number {
+    return this._points;
+  }
+
+  set points(newPoints) {
+    this._points = newPoints;
+    document.body.classList.add("correct");
+
+    elements.guess.value = "";
+    elements.guess.disabled = true;
+    elements.points.textContent = `You have ${this._points} points`;
+
+    setTimeout(() => {
+      document.body.classList.remove("correct");
+      elements.guess.disabled = false;
+    }, 2000);
+  }
+}

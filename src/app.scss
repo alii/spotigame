@@ -14,6 +14,33 @@ $font: "Inter", sans-serif;
 
 body {
   padding: 10%;
+
+  #correct-container {
+    clip-path: circle(0 at 0 50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $primary;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      border-radius: 50%;
+      color: white;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &.correct {
+    #correct-container {
+      clip-path: circle(150% at 0 50%);
+    }
+  }
 }
 
 h2 {
@@ -28,7 +55,7 @@ h4 {
 
 label {
   color: rgba($light, 0.5);
-  margin-top: 40px;
+  margin-top: 10px;
   display: block;
   margin-bottom: 5px;
 }
