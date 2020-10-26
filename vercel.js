@@ -6,4 +6,7 @@ const fs = require("fs");
 const path = require("path");
 
 const { CLIENT_ID } = process.env;
+
+if (!CLIENT_ID) throw new Error("Spotify Client ID was not defined.");
+
 fs.writeFileSync(path.join(__dirname, ".env"), `CLIENT_ID=${CLIENT_ID}`);
