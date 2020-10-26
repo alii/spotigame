@@ -45,10 +45,10 @@ window.onSpotifyWebPlaybackSDKReady = async () => {
     console.error(message);
   });
 
-  player.addListener("player_state_changed", (playback) => {
+  player.addListener("player_state_changed", ({ track_window }) => {
     state.song = {
-      name: playback.track_window.current_track.name,
-      artist: playback.track_window.current_track.artists[0].name,
+      name: track_window.current_track.name,
+      artist: track_window.current_track.artists[0].name,
     };
   });
 

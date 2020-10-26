@@ -70,8 +70,11 @@ export class State {
   }
 
   set song(newSong) {
-    if (!newSong)
+    if (!newSong) {
       throw new Error(`Song must be of type TSong (and not ${typeof newSong})`);
+    }
+
+    this._song = newSong;
     elements.artist.innerHTML = `You are listening to a song by <b>${newSong.artist}</b>`;
   }
 }
