@@ -5,6 +5,7 @@ export const REDIRECT_URI = urlcat("https://accounts.spotify.com/authorize", {
   redirect_uri: window.location.href,
   response_type: "token",
   scope: [
+    "user-read-private",
     "streaming",
     "user-read-playback-state",
     "user-modify-playback-state",
